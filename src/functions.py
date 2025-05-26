@@ -6,13 +6,16 @@ def formatPrice(n):
     return ("-$" if n < 0 else "$") + "{0:.2f}".format(abs(n))
 
 # returns the vector containing stock data from a fixed file
-def getStockDataVec(key):
+def getStockDataVec(key, normalizer=1):
     vec = []
     lines = open("data/" + key + ".csv", "r").read().splitlines()
 
     for line in lines[1:]:
         vec.append(float(line.split(",")[4]))
 
+    # normalize the data with 100
+    vec = [price / normalizer for price in vec]
+    
     return vec
 
 # returns the sigmoid

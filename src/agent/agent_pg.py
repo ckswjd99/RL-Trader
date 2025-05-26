@@ -3,6 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 from collections import deque
+from agent.agent import Agent
 
 class PolicyNetwork(nn.Module):
     def __init__(self, state_size, action_size):
@@ -14,10 +15,9 @@ class PolicyNetwork(nn.Module):
         x = torch.relu(self.fc1(x))
         return torch.softmax(self.fc2(x), dim=-1)
 
-class AgentPG:
+class AgentPG(Agent):
     def __init__(self, state_size, lr=0.001):
-        self.state_size = state_size
-        self.action_size = 3
+        super().__init__(state_size, action_size=3)
         self.model = PolicyNetwork(state_size, self.action_size)
         self.optimizer = optim.Adam(self.model.parameters(), lr=lr)
         self.memory = []
@@ -28,8 +28,12 @@ class AgentPG:
         action = np.random.choice(self.action_size, p=probs.detach().numpy()[0])
         return action
 
-    def remember(self, state, action, reward):
+    def remember(self, state, action, reward, next_state=None, done=None):
         self.memory.append((state, action, reward))
+
+    def train_step(self, batch_size):
+        # PG는 step마다 별도 학습 없음
+        pass
 
     def train(self, gamma=0.99):
         R = 0

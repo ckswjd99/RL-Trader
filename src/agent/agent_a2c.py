@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import numpy as np
+from agent.agent import Agent
 
 class ActorCritic(nn.Module):
     def __init__(self, state_size, action_size):
@@ -17,23 +18,20 @@ class ActorCritic(nn.Module):
         x = self.fc(x)
         return torch.softmax(self.actor(x), dim=-1), self.critic(x)
 
-class AgentA2C:
+class AgentA2C(Agent):
     def __init__(self, state_size, lr=0.001):
-        self.state_size = state_size
-        self.action_size = 3
+        super().__init__(state_size, action_size=3)
         self.model = ActorCritic(state_size, self.action_size)
         self.optimizer = optim.Adam(self.model.parameters(), lr=lr)
         self.memory = []
         self.inventory = []
 
-    def act(self, state):
-        state = torch.FloatTensor(state)
-        probs, _ = self.model(state)
-        action = np.random.choice(self.action_size, p=probs.detach().numpy()[0])
-        return action
-
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
+
+    def train_step(self, batch_size):
+        # A2C는 step마다 별도 학습 없음
+        pass
 
     def train(self, gamma=0.99):
         for state, action, reward, next_state, done in self.memory:
@@ -54,3 +52,9 @@ class AgentA2C:
             loss.backward()
             self.optimizer.step()
         self.memory = []
+
+    def act(self, state):
+        state = torch.FloatTensor(state)
+        probs, _ = self.model(state)
+        action = np.random.choice(self.action_size, p=probs.detach().numpy()[0])
+        return action

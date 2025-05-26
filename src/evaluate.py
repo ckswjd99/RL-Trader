@@ -10,7 +10,7 @@ parser.add_argument('--window', type=int, default=10)
 args = parser.parse_args()
 
 if args.agent == 'dqn':
-    from agent.agent import Agent
+    from agent.agent_dqn import Agent
     agent = Agent(args.window, is_eval=True, model_name=args.model)
 elif args.agent == 'pg':
     from agent.agent_pg import AgentPG
