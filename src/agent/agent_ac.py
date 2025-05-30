@@ -10,7 +10,11 @@ class Actor(nn.Module):
         self.fc = nn.Sequential(
             nn.Linear(state_size, 64),
             nn.ReLU(),
-            nn.Linear(64, action_size),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 8),
+            nn.ReLU(),
+            nn.Linear(8, action_size),
             nn.Softmax(dim=-1)
         )
     def forward(self, x):
@@ -22,7 +26,11 @@ class Critic(nn.Module):
         self.fc = nn.Sequential(
             nn.Linear(state_size, 64),
             nn.ReLU(),
-            nn.Linear(64, 1)
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 8),
+            nn.ReLU(),
+            nn.Linear(8, 1)  # Critic outputs a single value
         )
     def forward(self, x):
         return self.fc(x)

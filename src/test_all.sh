@@ -1,17 +1,19 @@
 #!/bin/bash
 
-AGENTS=("dqn" "pg" "ac" "a2c" "a3c" "deepsarsa")
-STOCKS=("hangsen_ours" "japan_ni_ours" "kosdaq_ours" "kospi_ours" "nasdaq_ours")
-CASH=(500 500 200 200 200)
-NORMALIZER=(100 100 10 10 40)
+AGENTS=("pg" "dqn" "ac" "a2c" "a3c" "deepsarsa")
+BASE_STOCKS=("hangsen_ours" "japan_ni_ours" "kosdaq_ours" "kospi_ours" "nasdaq_ours")
+INDICATORS=("none" "sharpe" "kelly" "var" "cvar")
 EPISODES=10
+KFOLDS=5
 
 for agent in "${AGENTS[@]}"; do
-  for i in "${!STOCKS[@]}"; do
-    stock="${STOCKS[$i]}"
-    cash="${CASH[$i]}"
-    normalizer="${NORMALIZER[$i]}"
-    echo "Running: python train.py --agent=$agent --episodes=$EPISODES --stock=$stock --cash=$cash --normalizer=$normalizer"
-    python train.py --agent="$agent" --episodes="$EPISODES" --stock="$stock" --cash="$cash" --normalizer="$normalizer"
+  for stock in "${BASE_STOCKS[@]}"; do
+    for fold in $(seq 1 $KFOLDS); do
+      stock_fold="${stock}_fold${fold}"
+      for indicator in "${INDICATORS[@]}"; do
+        echo "Running: python train.py --agent=$agent --episodes=$EPISODES --stock=$stock_fold --indicator=$indicator"
+        python train.py --agent="$agent" --episodes="$EPISODES" --stock="$stock_fold" --indicator="$indicator"
+      done
+    done
   done
 done

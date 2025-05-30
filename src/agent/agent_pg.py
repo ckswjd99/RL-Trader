@@ -8,12 +8,18 @@ from agent.agent import Agent
 class PolicyNetwork(nn.Module):
     def __init__(self, state_size, action_size):
         super().__init__()
-        self.fc1 = nn.Linear(state_size, 64)
-        self.fc2 = nn.Linear(64, action_size)
+        self.fc = nn.Sequential(
+            nn.Linear(state_size, 64),
+            nn.ReLU(),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 8),
+            nn.ReLU(),
+            nn.Linear(8, action_size)
+        )
 
     def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        return torch.softmax(self.fc2(x), dim=-1)
+        return torch.softmax(self.fc(x), dim=-1)
 
 class AgentPG(Agent):
     def __init__(self, state_size, lr=0.001):
@@ -25,7 +31,15 @@ class AgentPG(Agent):
     def act(self, state):
         state = torch.FloatTensor(state)
         probs = self.model(state)
-        action = np.random.choice(self.action_size, p=probs.detach().numpy()[0])
+
+        probs_np = probs.detach().numpy()[0]
+        if np.isnan(probs_np).any():
+            print("[ERROR] NaN detected in action probabilities!")
+            print("probs =", probs_np)
+            print("raw logits =", self.model(state).detach().numpy()[0])  # 또는 policy_output
+            exit(1)
+
+        action = np.random.choice(self.action_size, p=probs_np)
         return action
 
     def remember(self, state, action, reward, next_state=None, done=None):

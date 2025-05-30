@@ -9,16 +9,19 @@ from agent.agent import Agent
 class DQN(nn.Module):
     def __init__(self, state_size, action_size):
         super(DQN, self).__init__()
-        self.fc1 = nn.Linear(state_size, 64)
-        self.fc2 = nn.Linear(64, 32)
-        self.fc3 = nn.Linear(32, 8)
-        self.fc4 = nn.Linear(8, action_size)
+
+        self.net = nn.Sequential(
+            nn.Linear(state_size, 64),
+            nn.ReLU(),
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 8),
+            nn.ReLU(),
+            nn.Linear(8, action_size)
+        )
 
     def forward(self, x):
-        x = torch.relu(self.fc1(x))
-        x = torch.relu(self.fc2(x))
-        x = torch.relu(self.fc3(x))
-        return self.fc4(x)
+        return self.net(x)
 
 class AgentDQN(Agent):
     def __init__(self, state_size, is_eval=False, model_name=""):

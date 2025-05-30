@@ -11,8 +11,20 @@ class ActorCritic(nn.Module):
             nn.Linear(state_size, 64),
             nn.ReLU()
         )
-        self.actor = nn.Linear(64, action_size)
-        self.critic = nn.Linear(64, 1)
+        self.actor = nn.Sequential(
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 8),
+            nn.ReLU(),
+            nn.Linear(8, action_size)
+        )
+        self.critic = nn.Sequential(
+            nn.Linear(64, 32),
+            nn.ReLU(),
+            nn.Linear(32, 8),
+            nn.ReLU(),
+            nn.Linear(8, 1)  # Critic outputs a single value
+        )
 
     def forward(self, x):
         x = self.fc(x)
