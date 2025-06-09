@@ -1,0 +1,14 @@
+Evaluation of kospi_ours_fold3 with deepsarsa agent and var indicator
+Namespace(stock='kospi_ours_fold3', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $2165.39 | ACTION BUY
+DAY 1 | PRICE $2188.10 | ACTION BUY
+DAY 2 | PRICE $2245.58 | ACTION BUY
+DAY 3 | PRICE $2166.23 | ACTION BUY
+DAY 245 | PRICE $2390.44 | ACTION LIQUIDATE
+DAY 245 | PRICE $2390.44 | ACTION LIQUIDATE
+DAY 245 | PRICE $2390.44 | ACTION LIQUIDATE
+DAY 245 | PRICE $2390.44 | ACTION LIQUIDATE
+Initial Cash: $9308.40
+Total Profit: $796.46
+Final Cash:  $10104.86
+Price Change: $2165.39 → $2390.44 (10.39%)

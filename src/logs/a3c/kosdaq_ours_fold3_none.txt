@@ -1,0 +1,8 @@
+Evaluation of kosdaq_ours_fold3 with a3c agent and none indicator
+Namespace(stock='kosdaq_ours_fold3', window=30, episodes=10, agent='a3c', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 49 | PRICE $877.73 | ACTION BUY
+DAY 235 | PRICE $671.09 | ACTION LIQUIDATE
+Initial Cash: $6025.00
+Total Profit: -$206.64
+Final Cash:  $5818.36
+Price Change: $604.51 → $671.09 (11.01%)

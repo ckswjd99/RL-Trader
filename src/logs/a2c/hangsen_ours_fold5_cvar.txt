@@ -1,0 +1,12 @@
+Evaluation of hangsen_ours_fold5 with a2c agent and cvar indicator
+Namespace(stock='hangsen_ours_fold5', window=30, episodes=10, agent='a2c', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 15 | PRICE $24308.78 | ACTION BUY
+DAY 171 | PRICE $19510.76 | ACTION BUY
+DAY 221 | PRICE $17968.37 | ACTION BUY
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+Initial Cash: $156310.00
+Total Profit: -$1777.83
+Final Cash:  $154532.17
+Price Change: $28000.62 → $20003.36 (-28.56%)

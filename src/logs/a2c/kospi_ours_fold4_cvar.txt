@@ -1,0 +1,14 @@
+Evaluation of kospi_ours_fold4 with a2c agent and cvar indicator
+Namespace(stock='kospi_ours_fold4', window=30, episodes=10, agent='a2c', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $2183.90 | ACTION BUY
+DAY 1 | PRICE $2149.95 | ACTION BUY
+DAY 2 | PRICE $2204.49 | ACTION BUY
+DAY 3 | PRICE $2258.09 | ACTION BUY
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+Initial Cash: $9650.20
+Total Profit: $858.05
+Final Cash:  $10508.25
+Price Change: $2183.90 → $2413.62 (10.52%)

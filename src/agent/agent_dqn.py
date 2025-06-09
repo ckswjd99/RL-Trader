@@ -24,7 +24,7 @@ class DQN(nn.Module):
         return self.net(x)
 
 class AgentDQN(Agent):
-    def __init__(self, state_size, is_eval=False, model_name=""):
+    def __init__(self, state_size, is_eval=False, model_name="", lr=0.001):
         super().__init__(state_size, action_size=3)
         self.memory = deque(maxlen=1000)
         self.inventory = []
@@ -39,7 +39,7 @@ class AgentDQN(Agent):
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         self.model = DQN(state_size, self.action_size).to(self.device)
         self.criterion = nn.MSELoss()
-        self.optimizer = optim.Adam(self.model.parameters(), lr=0.001)
+        self.optimizer = optim.Adam(self.model.parameters(), lr=lr)
 
         if is_eval and model_name:
             self.model.load_state_dict(torch.load("models/" + model_name, map_location=self.device))

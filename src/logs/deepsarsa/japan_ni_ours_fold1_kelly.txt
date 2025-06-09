@@ -1,0 +1,8 @@
+Evaluation of japan_ni_ours_fold1 with deepsarsa agent and kelly indicator
+Namespace(stock='japan_ni_ours_fold1', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='kelly', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 101 | PRICE $26044.52 | ACTION BUY
+DAY 102 | PRICE $27165.93 | ACTION SELL
+Initial Cash: $185425.50
+Total Profit: $1121.41
+Final Cash:  $186546.91
+Price Change: $23837.72 → $38927.16 (63.30%)

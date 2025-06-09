@@ -1,0 +1,24 @@
+Evaluation of kosdaq_ours_fold1 with dqn agent and sharpe indicator
+Namespace(stock='kosdaq_ours_fold1', window=30, episodes=10, agent='dqn', lr=0.001, cash=10, normalizer=1, indicator='sharpe', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $637.20 | ACTION BUY
+DAY 1 | PRICE $487.07 | ACTION BUY
+DAY 2 | PRICE $435.11 | ACTION BUY
+DAY 3 | PRICE $502.48 | ACTION BUY
+DAY 4 | PRICE $564.02 | ACTION BUY
+DAY 5 | PRICE $593.01 | ACTION BUY
+DAY 6 | PRICE $634.20 | ACTION BUY
+DAY 7 | PRICE $638.58 | ACTION BUY
+DAY 8 | PRICE $658.93 | ACTION BUY
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+Initial Cash: $5393.00
+Total Profit: $800.56
+Final Cash:  $6193.56
+Price Change: $637.20 → $661.24 (3.77%)

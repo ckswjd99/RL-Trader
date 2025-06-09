@@ -1,0 +1,10 @@
+Evaluation of kosdaq_ours_fold4 with ac agent and kelly indicator
+Namespace(stock='kosdaq_ours_fold4', window=30, episodes=10, agent='ac', lr=0.001, cash=10, normalizer=1, indicator='kelly', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 146 | PRICE $774.54 | ACTION BUY
+DAY 147 | PRICE $786.52 | ACTION SELL
+DAY 220 | PRICE $764.46 | ACTION BUY
+DAY 221 | PRICE $764.15 | ACTION SELL
+Initial Cash: $6140.00
+Total Profit: $11.67
+Final Cash:  $6151.67
+Price Change: $591.38 → $679.23 (14.86%)

@@ -1,0 +1,8 @@
+Evaluation of nasdaq_ours_fold3 with ac agent and none indicator
+Namespace(stock='nasdaq_ours_fold3', window=30, episodes=10, agent='ac', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 210 | PRICE $16059.50 | ACTION BUY
+DAY 211 | PRICE $15925.91 | ACTION SELL
+Initial Cash: $37156.20
+Total Profit: -$133.59
+Final Cash:  $37022.61
+Price Change: $8943.50 → $19283.41 (115.61%)

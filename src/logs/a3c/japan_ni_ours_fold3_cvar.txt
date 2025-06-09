@@ -1,0 +1,18 @@
+Evaluation of japan_ni_ours_fold3 with a3c agent and cvar indicator
+Namespace(stock='japan_ni_ours_fold3', window=30, episodes=10, agent='a3c', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 17 | PRICE $19902.93 | ACTION BUY
+DAY 98 | PRICE $28293.70 | ACTION BUY
+DAY 131 | PRICE $28091.38 | ACTION BUY
+DAY 149 | PRICE $27175.88 | ACTION BUY
+DAY 185 | PRICE $31901.39 | ACTION BUY
+DAY 188 | PRICE $32049.34 | ACTION BUY
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+Initial Cash: $181934.10
+Total Profit: $70601.72
+Final Cash:  $252535.82
+Price Change: $23148.53 → $39669.39 (71.37%)

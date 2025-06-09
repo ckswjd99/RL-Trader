@@ -1,0 +1,20 @@
+Evaluation of kospi_ours_fold5 with deepsarsa agent and cvar indicator
+Namespace(stock='kospi_ours_fold5', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $2177.40 | ACTION BUY
+DAY 1 | PRICE $2164.27 | ACTION BUY
+DAY 2 | PRICE $2232.94 | ACTION BUY
+DAY 3 | PRICE $2238.25 | ACTION BUY
+DAY 7 | PRICE $2186.72 | ACTION SELL
+DAY 8 | PRICE $2049.15 | ACTION BUY
+DAY 57 | PRICE $2993.46 | ACTION SELL
+DAY 58 | PRICE $3022.54 | ACTION BUY
+DAY 105 | PRICE $2688.24 | ACTION SELL
+DAY 106 | PRICE $2694.90 | ACTION BUY
+DAY 245 | PRICE $2432.42 | ACTION LIQUIDATE
+DAY 245 | PRICE $2432.42 | ACTION LIQUIDATE
+DAY 245 | PRICE $2432.42 | ACTION LIQUIDATE
+DAY 245 | PRICE $2432.42 | ACTION LIQUIDATE
+Initial Cash: $9812.30
+Total Profit: $1018.65
+Final Cash:  $10830.95
+Price Change: $2177.40 → $2432.42 (11.71%)

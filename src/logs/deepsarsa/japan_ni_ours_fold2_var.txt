@@ -1,0 +1,6 @@
+Evaluation of japan_ni_ours_fold2 with deepsarsa agent and var indicator
+Namespace(stock='japan_ni_ours_fold2', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+Initial Cash: $181682.70
+Total Profit: $0.00
+Final Cash:  $181682.70
+Price Change: $23656.62 → $39110.92 (65.33%)

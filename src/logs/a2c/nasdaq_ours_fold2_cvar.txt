@@ -1,0 +1,14 @@
+Evaluation of nasdaq_ours_fold2 with a2c agent and cvar indicator
+Namespace(stock='nasdaq_ours_fold2', window=30, episodes=10, agent='a2c', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $8976.43 | ACTION BUY
+DAY 1 | PRICE $9164.66 | ACTION BUY
+DAY 2 | PRICE $9346.81 | ACTION BUY
+DAY 3 | PRICE $9088.04 | ACTION BUY
+DAY 250 | PRICE $19342.51 | ACTION LIQUIDATE
+DAY 250 | PRICE $19342.51 | ACTION LIQUIDATE
+DAY 250 | PRICE $19342.51 | ACTION LIQUIDATE
+DAY 250 | PRICE $19342.51 | ACTION LIQUIDATE
+Initial Cash: $37348.70
+Total Profit: $40794.10
+Final Cash:  $78142.80
+Price Change: $8976.43 → $19342.51 (115.48%)

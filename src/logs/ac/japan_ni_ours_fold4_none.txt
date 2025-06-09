@@ -1,0 +1,10 @@
+Evaluation of japan_ni_ours_fold4 with ac agent and none indicator
+Namespace(stock='japan_ni_ours_fold4', window=30, episodes=10, agent='ac', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 83 | PRICE $30358.93 | ACTION BUY
+DAY 84 | PRICE $30001.99 | ACTION SELL
+DAY 231 | PRICE $38240.65 | ACTION BUY
+DAY 232 | PRICE $38457.62 | ACTION SELL
+Initial Cash: $188509.20
+Total Profit: -$139.97
+Final Cash:  $188369.23
+Price Change: $23299.92 → $39864.46 (71.09%)

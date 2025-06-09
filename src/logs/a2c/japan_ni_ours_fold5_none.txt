@@ -1,0 +1,24 @@
+Evaluation of japan_ni_ours_fold5 with a2c agent and none indicator
+Namespace(stock='japan_ni_ours_fold5', window=30, episodes=10, agent='a2c', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $23775.40 | ACTION BUY
+DAY 1 | PRICE $22951.18 | ACTION SELL
+DAY 63 | PRICE $29558.55 | ACTION BUY
+DAY 64 | PRICE $28800.86 | ACTION SELL
+DAY 92 | PRICE $29402.57 | ACTION BUY
+DAY 93 | PRICE $28605.61 | ACTION SELL
+DAY 129 | PRICE $28395.30 | ACTION BUY
+DAY 130 | PRICE $27944.25 | ACTION SELL
+DAY 168 | PRICE $31898.75 | ACTION BUY
+DAY 169 | PRICE $33186.93 | ACTION SELL
+DAY 179 | PRICE $32186.57 | ACTION BUY
+DAY 180 | PRICE $32784.32 | ACTION BUY
+DAY 181 | PRICE $32486.48 | ACTION SELL
+DAY 182 | PRICE $32988.65 | ACTION SELL
+DAY 239 | PRICE $38246.36 | ACTION BUY
+DAY 240 | PRICE $38442.00 | ACTION SELL
+DAY 243 | PRICE $39364.68 | ACTION BUY
+DAY 243 | PRICE $38995.76 | ACTION LIQUIDATE
+Initial Cash: $186774.20
+Total Profit: -$1210.78
+Final Cash:  $185563.42
+Price Change: $23775.40 → $38995.76 (64.02%)

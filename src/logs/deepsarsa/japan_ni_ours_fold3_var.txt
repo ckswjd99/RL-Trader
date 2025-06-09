@@ -1,0 +1,24 @@
+Evaluation of japan_ni_ours_fold3 with deepsarsa agent and var indicator
+Namespace(stock='japan_ni_ours_fold3', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $23148.53 | ACTION BUY
+DAY 1 | PRICE $23951.66 | ACTION BUY
+DAY 2 | PRICE $23843.48 | ACTION BUY
+DAY 3 | PRICE $23115.15 | ACTION BUY
+DAY 4 | PRICE $22854.45 | ACTION BUY
+DAY 5 | PRICE $23693.72 | ACTION BUY
+DAY 6 | PRICE $23234.96 | ACTION BUY
+DAY 10 | PRICE $16358.19 | ACTION BUY
+DAY 208 | PRICE $39197.00 | ACTION SELL
+DAY 209 | PRICE $38820.95 | ACTION BUY
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+DAY 243 | PRICE $39669.39 | ACTION LIQUIDATE
+Initial Cash: $181934.10
+Total Profit: $137531.03
+Final Cash:  $319465.13
+Price Change: $23148.53 → $39669.39 (71.37%)

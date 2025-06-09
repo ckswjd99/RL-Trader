@@ -1,0 +1,8 @@
+Evaluation of nasdaq_ours_fold1 with deepsarsa agent and none indicator
+Namespace(stock='nasdaq_ours_fold1', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 9 | PRICE $7943.16 | ACTION BUY
+DAY 10 | PRICE $6882.86 | ACTION SELL
+Initial Cash: $38982.30
+Total Profit: -$1060.30
+Final Cash:  $37922.00
+Price Change: $9010.89 → $19553.40 (117.00%)

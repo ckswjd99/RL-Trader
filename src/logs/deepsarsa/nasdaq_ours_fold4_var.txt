@@ -1,0 +1,8 @@
+Evaluation of nasdaq_ours_fold4 with deepsarsa agent and var indicator
+Namespace(stock='nasdaq_ours_fold4', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 234 | PRICE $17700.27 | ACTION BUY
+DAY 235 | PRICE $17498.79 | ACTION SELL
+Initial Cash: $37110.90
+Total Profit: -$201.48
+Final Cash:  $36909.42
+Price Change: $8909.19 → $19813.76 (122.40%)

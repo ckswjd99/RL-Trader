@@ -1,0 +1,14 @@
+Evaluation of nasdaq_ours_fold4 with dqn agent and cvar indicator
+Namespace(stock='nasdaq_ours_fold4', window=30, episodes=10, agent='dqn', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $8909.19 | ACTION BUY
+DAY 1 | PRICE $9042.55 | ACTION BUY
+DAY 2 | PRICE $9226.49 | ACTION BUY
+DAY 3 | PRICE $9375.13 | ACTION BUY
+DAY 250 | PRICE $19813.76 | ACTION LIQUIDATE
+DAY 250 | PRICE $19813.76 | ACTION LIQUIDATE
+DAY 250 | PRICE $19813.76 | ACTION LIQUIDATE
+DAY 250 | PRICE $19813.76 | ACTION LIQUIDATE
+Initial Cash: $37110.90
+Total Profit: $42701.68
+Final Cash:  $79812.58
+Price Change: $8909.19 → $19813.76 (122.40%)

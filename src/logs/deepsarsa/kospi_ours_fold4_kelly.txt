@@ -1,0 +1,16 @@
+Evaluation of kospi_ours_fold4 with deepsarsa agent and kelly indicator
+Namespace(stock='kospi_ours_fold4', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='kelly', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $2183.90 | ACTION BUY
+DAY 1 | PRICE $2149.95 | ACTION BUY
+DAY 2 | PRICE $2204.49 | ACTION BUY
+DAY 3 | PRICE $2258.09 | ACTION BUY
+DAY 210 | PRICE $2739.12 | ACTION SELL
+DAY 211 | PRICE $2705.31 | ACTION BUY
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+DAY 245 | PRICE $2413.62 | ACTION LIQUIDATE
+Initial Cash: $9650.20
+Total Profit: $891.86
+Final Cash:  $10542.06
+Price Change: $2183.90 → $2413.62 (10.52%)

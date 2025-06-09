@@ -1,0 +1,14 @@
+Evaluation of kospi_ours_fold1 with dqn agent and cvar indicator
+Namespace(stock='kospi_ours_fold1', window=30, episodes=10, agent='dqn', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $2195.65 | ACTION BUY
+DAY 1 | PRICE $2137.72 | ACTION BUY
+DAY 2 | PRICE $2223.39 | ACTION BUY
+DAY 3 | PRICE $2235.13 | ACTION BUY
+DAY 245 | PRICE $2428.82 | ACTION LIQUIDATE
+DAY 245 | PRICE $2428.82 | ACTION LIQUIDATE
+DAY 245 | PRICE $2428.82 | ACTION LIQUIDATE
+DAY 245 | PRICE $2428.82 | ACTION LIQUIDATE
+Initial Cash: $9840.50
+Total Profit: $923.39
+Final Cash:  $10763.89
+Price Change: $2195.65 → $2428.82 (10.62%)

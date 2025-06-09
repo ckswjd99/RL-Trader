@@ -1,0 +1,24 @@
+Evaluation of kosdaq_ours_fold2 with a2c agent and cvar indicator
+Namespace(stock='kosdaq_ours_fold2', window=30, episodes=10, agent='a2c', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $614.58 | ACTION BUY
+DAY 1 | PRICE $504.51 | ACTION BUY
+DAY 3 | PRICE $511.47 | ACTION BUY
+DAY 7 | PRICE $638.69 | ACTION BUY
+DAY 9 | PRICE $686.23 | ACTION BUY
+DAY 14 | PRICE $732.55 | ACTION BUY
+DAY 30 | PRICE $822.58 | ACTION BUY
+DAY 33 | PRICE $832.27 | ACTION BUY
+DAY 126 | PRICE $690.60 | ACTION BUY
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.92 | ACTION LIQUIDATE
+Initial Cash: $6090.00
+Total Profit: -$76.20
+Final Cash:  $6013.80
+Price Change: $614.58 → $661.92 (7.70%)

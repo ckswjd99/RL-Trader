@@ -23,7 +23,7 @@ class ActorCritic(nn.Module):
             nn.ReLU(),
             nn.Linear(32, 8),
             nn.ReLU(),
-            nn.Linear(8, 1)  # Critic outputs a single value
+            nn.Linear(8, 1)
         )
 
     def forward(self, x):
@@ -42,8 +42,7 @@ class AgentA2C(Agent):
         self.memory.append((state, action, reward, next_state, done))
 
     def train_step(self, batch_size):
-        # A2C는 step마다 별도 학습 없음
-        pass
+        pass  # A2C는 step마다 별도 학습 없음
 
     def train(self, gamma=0.99):
         for state, action, reward, next_state, done in self.memory:
@@ -54,10 +53,9 @@ class AgentA2C(Agent):
             target = reward + (0 if done else gamma * next_value.item())
             advantage = target - value.item()
 
-            log_prob = torch.log(probs[0][action])
+            log_prob = torch.log(probs[0][action] + 1e-8)  # log(0) 방지
             actor_loss = -log_prob * advantage
             critic_loss = (target - value) ** 2
-
             loss = actor_loss + critic_loss
 
             self.optimizer.zero_grad()
@@ -68,5 +66,20 @@ class AgentA2C(Agent):
     def act(self, state):
         state = torch.FloatTensor(state)
         probs, _ = self.model(state)
-        action = np.random.choice(self.action_size, p=probs.detach().numpy()[0])
-        return action
+
+        # 확률 벡터 안전 처리
+        prob_np = probs.detach().numpy().flatten()
+        if not np.all(np.isfinite(prob_np)):
+            prob_np = np.ones(self.action_size) / self.action_size
+        else:
+            prob_np = np.clip(prob_np, 0, 1)
+            total = prob_np.sum()
+            if total == 0 or not np.isfinite(total):
+                prob_np = np.ones(self.action_size) / self.action_size
+            else:
+                prob_np = prob_np / total
+
+        if not np.isclose(prob_np.sum(), 1.0, atol=1e-3):
+            prob_np = np.ones(self.action_size) / self.action_size
+
+        return np.random.choice(self.action_size, p=prob_np)

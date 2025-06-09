@@ -51,8 +51,28 @@ class AgentAC(Agent):
     def act(self, state):
         state = torch.FloatTensor(state)
         probs = self.actor(state)
-        action = np.random.choice(self.action_size, p=probs.detach().numpy()[0])
-        return action
+
+        # detach, numpy 변환, 차원 확장
+        prob_np = probs.detach().numpy().flatten()
+
+        # 안전장치 1: NaN 또는 inf 확인 → fallback
+        if not np.all(np.isfinite(prob_np)):
+            return np.random.choice(self.action_size)
+
+        # 안전장치 2: 음수값 제거 → clip 후 정규화
+        prob_np = np.clip(prob_np, 0, 1)
+        total = prob_np.sum()
+        if total == 0 or not np.isfinite(total):
+            prob_np = np.ones(self.action_size) / self.action_size
+        else:
+            prob_np = prob_np / total
+
+        # 안전장치 3: 최종 확률 합산 확인
+        if not np.isclose(prob_np.sum(), 1.0, atol=1e-3):
+            prob_np = np.ones(self.action_size) / self.action_size
+
+        return np.random.choice(self.action_size, p=prob_np)
+
 
     def train_step(self, batch_size):
         # AC는 step마다 별도 학습 없음

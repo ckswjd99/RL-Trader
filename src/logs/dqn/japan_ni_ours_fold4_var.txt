@@ -1,0 +1,22 @@
+Evaluation of japan_ni_ours_fold4 with dqn agent and var indicator
+Namespace(stock='japan_ni_ours_fold4', window=30, episodes=10, agent='dqn', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $23299.92 | ACTION BUY
+DAY 1 | PRICE $23875.82 | ACTION BUY
+DAY 2 | PRICE $23831.10 | ACTION BUY
+DAY 3 | PRICE $23214.28 | ACTION BUY
+DAY 4 | PRICE $23241.64 | ACTION BUY
+DAY 5 | PRICE $23784.31 | ACTION BUY
+DAY 6 | PRICE $23426.42 | ACTION BUY
+DAY 7 | PRICE $20916.40 | ACTION BUY
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+DAY 243 | PRICE $39864.46 | ACTION LIQUIDATE
+Initial Cash: $188509.20
+Total Profit: $133325.79
+Final Cash:  $321834.99
+Price Change: $23299.92 → $39864.46 (71.09%)

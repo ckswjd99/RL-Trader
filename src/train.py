@@ -34,6 +34,13 @@ parser.add_argument('--beta_cvar', type=float, default=0.1)
 
 args = parser.parse_args()
 
+# ---------- early exit if log already exists ---------- #
+log_dir = os.path.join("logs", args.agent)
+log_file = os.path.join(log_dir, f"{args.stock}_{args.indicator}.txt")
+if os.path.exists(log_file):
+    print(f"[INFO] Log already exists: {log_file} → skipping training.")
+    exit(0)
+
 # ---------- dynamic agent import ---------- #
 if args.agent == 'dqn':
     from agent.agent_dqn import AgentDQN as _Agent
@@ -72,7 +79,7 @@ def safe_sharpe(returns):
 def safe_kelly(returns):
     if len(returns) < MIN_N:
         return 0.0
-    wins   = [r for r in returns if r > 0]
+    wins = [r for r in returns if r > 0]
     losses = [r for r in returns if r <= 0]
     if not losses:
         return 0.0
@@ -154,22 +161,16 @@ for e in range(args.episodes + 1):
 
             if args.indicator == 'sharpe':
                 cur = safe_sharpe(trade_returns[-args.sharpe_window:])
-                delta = cur - prev_metric
-                reward += args.lambda_sharpe * delta
+                reward += args.lambda_sharpe * (cur - prev_metric)
                 prev_metric = cur
-
             elif args.indicator == 'kelly':
                 cur = safe_kelly(trade_returns[-args.kelly_window:])
                 delta = cur - prev_metric
-                if not np.isfinite(delta):
-                    delta = 0.0
-                reward += args.lambda_kelly * delta
+                reward += args.lambda_kelly * (delta if np.isfinite(delta) else 0.0)
                 prev_metric = cur
-
             elif args.indicator == 'var':
                 penalty = safe_var(trade_returns, args.alpha_var, tau=0.0)
                 reward -= args.lambda_var * penalty
-
             elif args.indicator == 'cvar':
                 penalty = safe_cvar(trade_returns, args.alpha_cvar, args.tau_cvar)
                 reward -= args.beta_cvar * penalty
@@ -194,13 +195,15 @@ for e in range(args.episodes + 1):
         if t == l_train - 1:
             agent.train()
 
+    model_dir = os.path.join("models", args.agent, f"{args.stock}_{args.indicator}")
+    os.makedirs(model_dir, exist_ok=True)
+
     if e % 10 == 0:
-        os.makedirs('models', exist_ok=True)
         if args.agent == 'ac':
-            torch.save(agent.actor.state_dict(), f"models/{args.agent}_actor_ep{e}.pt")
-            torch.save(agent.critic.state_dict(), f"models/{args.agent}_critic_ep{e}.pt")
+            torch.save(agent.actor.state_dict(), os.path.join(model_dir, f"actor_ep{e}.pt"))
+            torch.save(agent.critic.state_dict(), os.path.join(model_dir, f"critic_ep{e}.pt"))
         else:
-            torch.save(agent.model.state_dict(), f"models/{args.agent}_ep{e}.pt")
+            torch.save(agent.model.state_dict(), os.path.join(model_dir, f"ep{e}.pt"))
 
 # ---------- evaluation ---------- #
 print("Starting evaluation…")
@@ -211,10 +214,7 @@ state = getState(eval_prices, 0, args.window + 1)
 total_profit, cash = 0.0, args.cash
 buy_steps, sell_steps, portfolio_values = [], [], []
 
-log_dir = os.path.join("logs", args.agent)
 os.makedirs(log_dir, exist_ok=True)
-log_file = os.path.join(log_dir, f"{args.stock}_{args.indicator}.txt")
-
 with open(log_file, 'w') as f:
     f.write(f"Evaluation of {args.stock} with {args.agent} agent and {args.indicator} indicator\n")
     f.write(str(args) + "\n")

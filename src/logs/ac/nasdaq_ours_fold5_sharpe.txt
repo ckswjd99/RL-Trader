@@ -1,0 +1,10 @@
+Evaluation of nasdaq_ours_fold5 with ac agent and sharpe indicator
+Namespace(stock='nasdaq_ours_fold5', window=30, episodes=10, agent='ac', lr=0.001, cash=10, normalizer=1, indicator='sharpe', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 171 | PRICE $12415.85 | ACTION BUY
+DAY 172 | PRICE $12903.63 | ACTION SELL
+DAY 212 | PRICE $15951.86 | ACTION BUY
+DAY 213 | PRICE $16312.95 | ACTION SELL
+Initial Cash: $38826.30
+Total Profit: $848.87
+Final Cash:  $39675.17
+Price Change: $8912.77 → $19888.11 (123.14%)

@@ -1,0 +1,6 @@
+Evaluation of hangsen_ours_fold4 with dqn agent and none indicator
+Namespace(stock='hangsen_ours_fold4', window=30, episodes=10, agent='dqn', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+Initial Cash: $151087.50
+Total Profit: $0.00
+Final Cash:  $151087.50
+Price Change: $27792.66 → $19968.07 (-28.15%)

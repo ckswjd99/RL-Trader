@@ -1,0 +1,24 @@
+Evaluation of kospi_ours_fold4 with a2c agent and kelly indicator
+Namespace(stock='kospi_ours_fold4', window=30, episodes=10, agent='a2c', lr=0.001, cash=10, normalizer=1, indicator='kelly', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 19 | PRICE $1968.59 | ACTION BUY
+DAY 20 | PRICE $1997.94 | ACTION SELL
+DAY 67 | PRICE $3133.64 | ACTION BUY
+DAY 68 | PRICE $3103.88 | ACTION SELL
+DAY 120 | PRICE $2653.59 | ACTION BUY
+DAY 121 | PRICE $2583.74 | ACTION SELL
+DAY 127 | PRICE $2391.48 | ACTION BUY
+DAY 128 | PRICE $2442.01 | ACTION SELL
+DAY 139 | PRICE $2204.64 | ACTION BUY
+DAY 140 | PRICE $2266.44 | ACTION SELL
+DAY 155 | PRICE $2424.16 | ACTION BUY
+DAY 156 | PRICE $2416.16 | ACTION SELL
+DAY 183 | PRICE $2539.24 | ACTION BUY
+DAY 184 | PRICE $2541.11 | ACTION SELL
+DAY 193 | PRICE $2507.30 | ACTION BUY
+DAY 194 | PRICE $2507.80 | ACTION SELL
+DAY 212 | PRICE $2641.16 | ACTION BUY
+DAY 213 | PRICE $2604.37 | ACTION SELL
+Initial Cash: $9650.20
+Total Profit: -$0.35
+Final Cash:  $9649.85
+Price Change: $2183.90 → $2413.62 (10.52%)

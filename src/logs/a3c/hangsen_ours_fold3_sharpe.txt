@@ -1,0 +1,12 @@
+Evaluation of hangsen_ours_fold3 with a3c agent and sharpe indicator
+Namespace(stock='hangsen_ours_fold3', window=30, episodes=10, agent='a3c', lr=0.001, cash=10, normalizer=1, indicator='sharpe', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 77 | PRICE $27878.53 | ACTION BUY
+DAY 78 | PRICE $27222.04 | ACTION SELL
+DAY 200 | PRICE $16185.91 | ACTION BUY
+DAY 201 | PRICE $15207.99 | ACTION SELL
+DAY 246 | PRICE $19802.22 | ACTION BUY
+DAY 246 | PRICE $20009.95 | ACTION LIQUIDATE
+Initial Cash: $147639.70
+Total Profit: -$1426.68
+Final Cash:  $146213.02
+Price Change: $27830.08 → $20009.95 (-28.10%)

@@ -1,0 +1,14 @@
+Evaluation of nasdaq_ours_fold1 with dqn agent and var indicator
+Namespace(stock='nasdaq_ours_fold1', window=30, episodes=10, agent='dqn', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $9010.89 | ACTION BUY
+DAY 1 | PRICE $9158.50 | ACTION BUY
+DAY 2 | PRICE $9301.32 | ACTION BUY
+DAY 3 | PRICE $9273.23 | ACTION BUY
+DAY 250 | PRICE $19553.40 | ACTION LIQUIDATE
+DAY 250 | PRICE $19553.40 | ACTION LIQUIDATE
+DAY 250 | PRICE $19553.40 | ACTION LIQUIDATE
+DAY 250 | PRICE $19553.40 | ACTION LIQUIDATE
+Initial Cash: $38982.30
+Total Profit: $41469.66
+Final Cash:  $80451.96
+Price Change: $9010.89 → $19553.40 (117.00%)

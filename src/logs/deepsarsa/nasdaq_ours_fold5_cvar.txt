@@ -1,0 +1,20 @@
+Evaluation of nasdaq_ours_fold5 with deepsarsa agent and cvar indicator
+Namespace(stock='nasdaq_ours_fold5', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $8912.77 | ACTION BUY
+DAY 1 | PRICE $9059.38 | ACTION BUY
+DAY 2 | PRICE $9231.14 | ACTION BUY
+DAY 3 | PRICE $9334.13 | ACTION BUY
+DAY 20 | PRICE $9333.16 | ACTION SELL
+DAY 21 | PRICE $9472.08 | ACTION BUY
+DAY 53 | PRICE $13329.77 | ACTION SELL
+DAY 54 | PRICE $13192.91 | ACTION BUY
+DAY 100 | PRICE $15528.91 | ACTION SELL
+DAY 101 | PRICE $15643.93 | ACTION BUY
+DAY 250 | PRICE $19888.11 | ACTION LIQUIDATE
+DAY 250 | PRICE $19888.11 | ACTION LIQUIDATE
+DAY 250 | PRICE $19888.11 | ACTION LIQUIDATE
+DAY 250 | PRICE $19888.11 | ACTION LIQUIDATE
+Initial Cash: $38826.30
+Total Profit: $42897.94
+Final Cash:  $81724.24
+Price Change: $8912.77 → $19888.11 (123.14%)

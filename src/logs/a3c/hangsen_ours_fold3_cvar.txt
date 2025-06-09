@@ -1,0 +1,16 @@
+Evaluation of hangsen_ours_fold3 with a3c agent and cvar indicator
+Namespace(stock='hangsen_ours_fold3', window=30, episodes=10, agent='a3c', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $27830.08 | ACTION BUY
+DAY 1 | PRICE $28245.97 | ACTION BUY
+DAY 2 | PRICE $28325.86 | ACTION BUY
+DAY 4 | PRICE $27706.37 | ACTION BUY
+DAY 5 | PRICE $26145.59 | ACTION BUY
+DAY 246 | PRICE $20009.95 | ACTION LIQUIDATE
+DAY 246 | PRICE $20009.95 | ACTION LIQUIDATE
+DAY 246 | PRICE $20009.95 | ACTION LIQUIDATE
+DAY 246 | PRICE $20009.95 | ACTION LIQUIDATE
+DAY 246 | PRICE $20009.95 | ACTION LIQUIDATE
+Initial Cash: $147639.70
+Total Profit: -$38204.12
+Final Cash:  $109435.58
+Price Change: $27830.08 → $20009.95 (-28.10%)

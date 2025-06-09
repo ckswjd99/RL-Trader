@@ -1,0 +1,10 @@
+Evaluation of kosdaq_ours_fold1 with deepsarsa agent and kelly indicator
+Namespace(stock='kosdaq_ours_fold1', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='kelly', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 119 | PRICE $799.36 | ACTION BUY
+DAY 120 | PRICE $826.45 | ACTION SELL
+DAY 207 | PRICE $843.22 | ACTION BUY
+DAY 208 | PRICE $836.65 | ACTION SELL
+Initial Cash: $5393.00
+Total Profit: $20.52
+Final Cash:  $5413.52
+Price Change: $637.20 → $661.24 (3.77%)

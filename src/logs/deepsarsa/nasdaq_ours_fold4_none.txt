@@ -1,0 +1,8 @@
+Evaluation of nasdaq_ours_fold4 with deepsarsa agent and none indicator
+Namespace(stock='nasdaq_ours_fold4', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 37 | PRICE $10612.92 | ACTION BUY
+DAY 38 | PRICE $11092.90 | ACTION SELL
+Initial Cash: $37110.90
+Total Profit: $479.98
+Final Cash:  $37590.88
+Price Change: $8909.19 → $19813.76 (122.40%)

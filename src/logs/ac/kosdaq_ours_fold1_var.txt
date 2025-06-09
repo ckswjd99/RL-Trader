@@ -1,0 +1,18 @@
+Evaluation of kosdaq_ours_fold1 with ac agent and var indicator
+Namespace(stock='kosdaq_ours_fold1', window=30, episodes=10, agent='ac', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 60 | PRICE $949.78 | ACTION BUY
+DAY 108 | PRICE $839.52 | ACTION BUY
+DAY 121 | PRICE $825.46 | ACTION BUY
+DAY 137 | PRICE $712.21 | ACTION BUY
+DAY 156 | PRICE $844.68 | ACTION BUY
+DAY 198 | PRICE $876.62 | ACTION BUY
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+DAY 236 | PRICE $661.24 | ACTION LIQUIDATE
+Initial Cash: $5393.00
+Total Profit: -$1080.83
+Final Cash:  $4312.17
+Price Change: $637.20 → $661.24 (3.77%)

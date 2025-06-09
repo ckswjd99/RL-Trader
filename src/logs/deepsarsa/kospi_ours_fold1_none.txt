@@ -1,0 +1,10 @@
+Evaluation of kospi_ours_fold1 with deepsarsa agent and none indicator
+Namespace(stock='kospi_ours_fold1', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='none', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 10 | PRICE $1680.60 | ACTION BUY
+DAY 11 | PRICE $1466.48 | ACTION SELL
+DAY 87 | PRICE $2940.59 | ACTION BUY
+DAY 88 | PRICE $2909.47 | ACTION SELL
+Initial Cash: $9840.50
+Total Profit: -$245.24
+Final Cash:  $9595.26
+Price Change: $2195.65 → $2428.82 (10.62%)

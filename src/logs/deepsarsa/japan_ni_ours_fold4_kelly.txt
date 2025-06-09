@@ -1,0 +1,8 @@
+Evaluation of japan_ni_ours_fold4 with deepsarsa agent and kelly indicator
+Namespace(stock='japan_ni_ours_fold4', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='kelly', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 135 | PRICE $26237.42 | ACTION BUY
+DAY 136 | PRICE $26872.45 | ACTION SELL
+Initial Cash: $188509.20
+Total Profit: $635.03
+Final Cash:  $189144.23
+Price Change: $23299.92 → $39864.46 (71.09%)

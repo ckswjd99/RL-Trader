@@ -1,0 +1,18 @@
+Evaluation of hangsen_ours_fold5 with deepsarsa agent and cvar indicator
+Namespace(stock='hangsen_ours_fold5', window=30, episodes=10, agent='deepsarsa', lr=0.001, cash=10, normalizer=1, indicator='cvar', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $28000.62 | ACTION BUY
+DAY 1 | PRICE $28054.29 | ACTION BUY
+DAY 2 | PRICE $28671.84 | ACTION BUY
+DAY 3 | PRICE $28795.42 | ACTION BUY
+DAY 4 | PRICE $27101.54 | ACTION BUY
+DAY 140 | PRICE $15041.40 | ACTION BUY
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+DAY 246 | PRICE $20003.36 | ACTION LIQUIDATE
+Initial Cash: $156310.00
+Total Profit: -$35644.95
+Final Cash:  $120665.05
+Price Change: $28000.62 → $20003.36 (-28.56%)

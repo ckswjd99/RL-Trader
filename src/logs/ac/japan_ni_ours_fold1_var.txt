@@ -1,0 +1,22 @@
+Evaluation of japan_ni_ours_fold1 with ac agent and var indicator
+Namespace(stock='japan_ni_ours_fold1', window=30, episodes=10, agent='ac', lr=0.001, cash=10, normalizer=1, indicator='var', lambda_sharpe=0.1, sharpe_window=20, lambda_kelly=0.1, kelly_window=20, alpha_var=0.05, lambda_var=0.1, alpha_cvar=0.05, tau_cvar=-0.05, beta_cvar=0.1)
+DAY 0 | PRICE $23837.72 | ACTION BUY
+DAY 2 | PRICE $24013.75 | ACTION BUY
+DAY 3 | PRICE $23755.32 | ACTION BUY
+DAY 5 | PRICE $23759.42 | ACTION BUY
+DAY 6 | PRICE $23335.99 | ACTION BUY
+DAY 9 | PRICE $18891.77 | ACTION BUY
+DAY 10 | PRICE $16378.94 | ACTION BUY
+DAY 11 | PRICE $18446.80 | ACTION BUY
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+DAY 243 | PRICE $38927.16 | ACTION LIQUIDATE
+Initial Cash: $185425.50
+Total Profit: $138997.57
+Final Cash:  $324423.07
+Price Change: $23837.72 → $38927.16 (63.30%)
